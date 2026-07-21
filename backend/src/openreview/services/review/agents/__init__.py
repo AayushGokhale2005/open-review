@@ -2,7 +2,12 @@
 
 from __future__ import annotations
 
-from openreview.services.review.agents.base import AgentComment, AgentResult, ReviewAgent, ReviewContext
+from openreview.services.review.agents.base import (
+    AgentComment,
+    AgentResult,
+    ReviewAgent,
+    ReviewContext,
+)
 
 
 def _first_file(context: ReviewContext) -> str:

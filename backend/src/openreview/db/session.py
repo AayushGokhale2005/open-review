@@ -42,7 +42,7 @@ async def create_tables() -> None:
         await conn.run_sync(Base.metadata.create_all)
 
 
-async def get_db() -> AsyncGenerator[AsyncSession, None]:
+async def get_db() -> AsyncGenerator[AsyncSession]:
     if SessionLocal is None:
         raise RuntimeError("Database not initialized")
     async with SessionLocal() as session:

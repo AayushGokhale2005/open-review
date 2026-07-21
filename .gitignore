@@ -34,10 +34,13 @@ htmlcov/
 .ruff_cache/
 test-results/
 playwright-report/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
 
 # Build outputs
 frontend/dist/
-src-tauri/target/
+frontend/src-tauri/target/
 *.app
 *.dmg
 *.msi
