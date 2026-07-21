@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-background: #08090b;
+  --color-foreground: #e8eaed;
+  --color-muted: #12141a;
+  --color-muted-foreground: #8b929e;
+  --color-card: #0e1015;
+  --color-card-foreground: #e8eaed;
+  --color-border: #1c2028;
+  --color-input: #1c2028;
+  --color-ring: #2dd4bf;
+  --color-primary: #2dd4bf;
+  --color-primary-foreground: #042f2e;
+  --color-secondary: #171a21;
+  --color-secondary-foreground: #e8eaed;
+  --color-accent: #151922;
+  --color-accent-foreground: #e8eaed;
+  --color-destructive: #f87171;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-sidebar: #0a0c10;
+  --color-sidebar-border: #161a22;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(45, 212, 191, 0.08), transparent),
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 48px 48px, 48px 48px;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(45, 212, 191, 0.3);
+  }
+}
